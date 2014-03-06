@@ -1,7 +1,7 @@
-var initializer = require('./initializer');
+var initializer = require('..');
 var path        = require('path');
 
-
+// create a new instance
 var init = initializer(path.join(__dirname, 'initializers'));
 
 init.on('add', function added (fn) {
@@ -9,24 +9,27 @@ init.on('add', function added (fn) {
 })
 
 init.on('complete', function complete () {
-    console.log('finished loading initializers');
+    console.log('all initializers completed!');
 });
 
 init.on('error', function error (err) {
     console.error('error:', err);
 });
 
+// adding first (async) initializer onto the stack
 init.add(function first (next) {
-    console.log('starting misc init');
+    console.log('starting first init');
     setTimeout(function () {
         next();
     }, 1000);
-}, 100);
-
-init.add(function second () {
-    console.log('non async handler loading');
-}, 2).add(function third () {
-    console.log('another non async loading');
 });
 
+// chaining and adding sychronous handlers
+init.add(function second () {
+    console.log('second (sync) handler loading');
+}, 50).add(function third () {
+    console.log('another (sync) handler loading');
+});
+
+// start up the initializers
 init.start();

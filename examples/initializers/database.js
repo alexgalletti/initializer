@@ -3,4 +3,4 @@ module.exports = function database (done) {
     setTimeout(done, 1000);
 };
 
-module.exports.priority = 20;
+module.exports.priority = 50;
