@@ -11,7 +11,7 @@ Install with npm:
 `npm install initializer --save`
 
 Create a folder to house all your startup scripts aka initializers
-`
+```
 +run.js
 |
 +initializers/
@@ -19,7 +19,7 @@ Create a folder to house all your startup scripts aka initializers
     +-server.js
     +-database.js
     +-otherasyncstuff.js
-`
+```
 
 Each file should at the very least export a function (but it's completely up to you)
 
