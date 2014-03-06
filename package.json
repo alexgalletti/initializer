@@ -1,6 +1,6 @@
 {
   "name": "initializer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Helps to initialize your project.",
   "main": "index.js",
   "scripts": {
