@@ -1,0 +1,30 @@
+{
+  "name": "initializer",
+  "version": "0.0.1",
+  "description": "Helps to initialize your project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "init",
+    "initializer",
+    "boot",
+    "bootloader"
+  ],
+  "author": {
+    "name": "Alex Galletti",
+    "url": "http://alexgalletti.com/"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "dependencies": {
+    "async": "~0.2.10",
+    "glob": "~3.2.9",
+    "mocha": "~1.17.1"
+  }
+}
