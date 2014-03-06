@@ -28,7 +28,9 @@
   ],
   "dependencies": {
     "async": "~0.2.10",
-    "glob": "~3.2.9",
+    "glob": "~3.2.9"
+  },
+  "devDependencies": {
     "mocha": "~1.17.1"
   }
 }
